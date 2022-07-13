@@ -1,0 +1,20 @@
+/* Kommentar im CSS-Block */
+/* All-Selektor */
+*{
+    margin: 0;
+    font-family: sans-serif;
+    padding: 0;
+}
+/* Elementselektoren */
+
+/* Klassen-Selektoren */
+
+
+.clearfix{
+    clear: both;
+}
+/* ID-Selektoren */
+#wrapper{
+
+}
+
