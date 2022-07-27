@@ -18,7 +18,7 @@
     <header id="header">
         <img id="logo" src="assets/NIGHTSHIFT_Kreuz.png" alt="Logo">
         <h1 id="logo-heading">NIGHTSHIFT</h1>
-        <nav>
+        <nav class="float-right">
             <ul>
                 <li><a href="#header">HOME</a></li>
                 <li><a href="">PRODUKT</a></li>
@@ -26,13 +26,77 @@
             </ul>
         </nav>
     </header>
-    <div class="clearfix"\>
+    <div class="clearfix"></div>
     <div id="start-text">
         <h1>NIGHTSHIFT</h1>
         <h2>Verpasse jetzt deiner Party den letzten Schliff mit der Licht- und</h2>
         <h2>Soundtechnik von NIGHTSHIFT!</h2>
+        <div id="mieten-button" class="button">Jetzt mieten</div>
     </div>  
-    <div id="mieten-button" class="button">Jetzt mieten</div>
+    <h2 class="infos">Informationen</h2>
+    <article>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </article>
+    <h2 class="rechtsangebunden infos">Informationen</h2>
+    <article class="rechtsangebunden float-right">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </article>
+    <div class="clearfix"></div>
+    <h1 class="zentriert">Produkte</h1>
+    <div id="produkte">
+        <div class="produkt-box">
+            <img class="produkt-bild" src="" alt="Bild">
+            <h3 class="produkt-name">Partystativ</h3>
+            <p class="produkt-beschreibung">Perfekt für deine Party!</p>
+            <p class="produkt-preis">20€/Tag</p>
+        </div>
+        <div class="produkt-box">
+            <img class="produkt-bild" src="" alt="Bild">
+            <h3 class="produkt-name">Nebelmaschine</h3>
+            <p class="produkt-beschreibung">Inklusive Fluide!</p>
+            <p class="produkt-preis">10€/Tag</p>
+        </div>
+        <div class="produkt-box">
+            <img class="produkt-bild" src="" alt="Bild">
+            <h3 class="produkt-name">Lautsprecher</h3>
+            <p class="produkt-beschreibung">Guter Sound ist ein Muss!</p>
+            <p class="produkt-preis">50€/Tag</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <h2>Du hast dich dazu entschlossen deiner Party den letzten Schliff zu verpassen?</h2>
+    <h2 class="rechtsangebunden">Um dir dabei zuhelfen, benötigen wir noch ein paar Informationen über dich und deine Feier</h2>
+    <form action="">
+        <label for="vorname">Wie heißt du?</label>
+        <input type="text" id="vorname" name="vorname" placeholder="Vorname">
+        <input type="text" id="nachname" name="nachname" placeholder="Nachname"><br>
+        <label for="email">Wie lautet deine E-Mail?</label>
+        <input type="email" id="email" name="email" placeholder="E-Mail"><br>
+        <label for="datum">Wann möchtest du feiern?</label>
+        <input type="date" name="datum" id="datum" placeholder="Datum"><br>
+        <label for="ort">Wo möchtest du feiern?</label>
+        <input type="test" name="plz" id="plz" placeholder="Postleitzahl">
+        <input type="text" name="strasse" id="strasse" placeholder="Straße und Hausnummer"><br>
+        <label for="produktauswahl">Was möchtest du mieten?</label>
+        <label class="float-right" for="checkbox-stativ">Partystativ</label>
+        <input type="checkbox" name="checkbox-stativ" id="checkbox-stativ" value="partystativ">
+        <label class="float-right" for="checkbox-nebelmaschine">Nebelmaschine</label>
+        <input type="checkbox" name="checkbox-nebelmaschine" id="checkbox-nebelmaschine" value="nebelmaschine">
+        <label class="float-right" for="checkbox-lautsprecher">Lautsprecher</label>
+        <input type="checkbox" name="checkbox-lautsprecher" id="checkbox-lautsprecher" value="lautsprecher"><br>
+        <div class="clearfix"></div>
+        <input type="submit" value="Jetzt anfragen!">
+    </form>
+    <footer>
+        <img id="logo" src="assets/NIGHTSHIFT_Kreuz.png" alt="Logo">
+        <nav class="float-right">
+            <ul>
+                <li><a href="">Kontakt</a></li>
+                <li><a href="">Datenschutz</a></li>
+                <li><a href="">Impressum</a></li>
+            </ul>
+        </nav>
+    </footer>
 
 
 </div> <!-- wrapper -->
