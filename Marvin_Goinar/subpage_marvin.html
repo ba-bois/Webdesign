@@ -10,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
 <link href="styles_marvin.css" rel="stylesheet" type="text/css" />
 </head>
-
 <!-- visible content -->
 <body>
 <div id="wrapper">
@@ -66,27 +65,27 @@
     </div>
     <h2>Du hast dich dazu entschlossen deiner Party den letzten Schliff zu verpassen?</h2>
     <h2 class="rechtsangebunden">Um dir dabei zuhelfen, benötigen wir noch ein paar Informationen über dich und deine Feier</h2>
-    <form action="">
-        <label for="vorname">Wie heißt du?</label>
+    <form name="contact-form" action="">
+        <label for="vorname">Wie heißt du?</label><br>
         <input type="text" id="vorname" name="vorname" placeholder="Vorname">
         <input type="text" id="nachname" name="nachname" placeholder="Nachname"><br>
-        <label for="email">Wie lautet deine E-Mail?</label>
+        <label for="email">Wie lautet deine E-Mail?</label><br>
         <input type="email" id="email" name="email" placeholder="E-Mail"><br>
-        <label for="datum">Wann möchtest du feiern?</label>
+        <label for="datum">Wann möchtest du feiern?</label><br>
         <input type="date" name="datum" id="datum" placeholder="Datum"><br>
-        <label for="ort">Wo möchtest du feiern?</label>
+        <label for="ort">Wo möchtest du feiern?</label><br>
         <input type="test" name="plz" id="plz" placeholder="Postleitzahl">
         <input type="text" name="strasse" id="strasse" placeholder="Straße und Hausnummer"><br>
-        <label for="produktauswahl">Was möchtest du mieten?</label>
-        <label class="float-right" for="checkbox-stativ">Partystativ</label>
+        <label for="produktauswahl">Was möchtest du mieten?</label><br>
         <input type="checkbox" name="checkbox-stativ" id="checkbox-stativ" value="partystativ">
-        <label class="float-right" for="checkbox-nebelmaschine">Nebelmaschine</label>
+        <label class="" for="checkbox-stativ">Partystativ</label>
         <input type="checkbox" name="checkbox-nebelmaschine" id="checkbox-nebelmaschine" value="nebelmaschine">
-        <label class="float-right" for="checkbox-lautsprecher">Lautsprecher</label>
-        <input type="checkbox" name="checkbox-lautsprecher" id="checkbox-lautsprecher" value="lautsprecher"><br>
-        <div class="clearfix"></div>
+        <label class="" for="checkbox-nebelmaschine">Nebelmaschine</label>
+        <input type="checkbox" name="checkbox-lautsprecher" id="checkbox-lautsprecher" value="lautsprecher">
+        <label class="" for="checkbox-lautsprecher">Lautsprecher</label><br>
         <input type="submit" value="Jetzt anfragen!">
     </form>
+    <script src="formular_validation.js"></script>
     <footer>
         <img id="logo" src="assets/NIGHTSHIFT_Kreuz.png" alt="Logo">
         <nav class="float-right">

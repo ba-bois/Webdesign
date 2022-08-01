@@ -37,10 +37,9 @@ h2{
 }
 
 form{
-    width: 1200px;
+    width: 1000px;
     height: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 25vw;
     margin-top: 20vh;
     margin-bottom: 20vh;
 }
@@ -49,8 +48,8 @@ input{
     color:rgb(75, 75, 75);
     background-color: #ffffff;
     border-radius: 100px;
+    margin-bottom: 30px;
     border: none;
-    float: right;
 }
 
 input::placeholder{
@@ -113,6 +112,15 @@ label{
     margin-top: 350px;
 }
 
+.input-valid{
+    border: #1780EA;
+    border-style: solid;
+}
+
+.input-invalid{
+    border:#ff0000;
+    border-style: solid;
+}
 
 /* ID-Selektoren */
 #wrapper{
