@@ -8,20 +8,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Saira&display=swap" rel="stylesheet">
 <link href="styles_marvin.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- visible content -->
 <body>
 <div id="wrapper">
-    
     <header id="header">
-        <img id="logo" src="assets/NIGHTSHIFT_Kreuz.png" alt="Logo">
+        <img id="logo" src="assets/NIGHTSHIFT_Kreuz.svg" alt="Logo">
         <h1 id="logo-heading">NIGHTSHIFT</h1>
         <nav class="float-right">
             <ul>
-                <li><a href="#header">HOME</a></li>
-                <li><a href="">PRODUKT</a></li>
-                <li><a href="">KONTAKT</a></li>
+                <li><a href="#wrapper">HOME</a></li>
+                <li><a href="#produkte">PRODUKT</a></li>
+                <li><a href="#footer">KONTAKT</a></li>
             </ul>
         </nav>
     </header>
@@ -32,6 +33,9 @@
         <h2>Soundtechnik von NIGHTSHIFT!</h2>
         <div id="mieten-button" class="button">Jetzt mieten</div>
     </div>  
+    <aside>
+        
+    </aside>
     <h2 class="infos">Informationen</h2>
     <article>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -44,22 +48,28 @@
     <h1 class="zentriert">Produkte</h1>
     <div id="produkte">
         <div class="produkt-box">
-            <img class="produkt-bild" src="" alt="Bild">
-            <h3 class="produkt-name">Partystativ</h3>
-            <p class="produkt-beschreibung">Perfekt für deine Party!</p>
-            <p class="produkt-preis">20€/Tag</p>
+            <img class="produkt-bild" src="assets/Partystativ.jpg" alt="Partystativ">
+            <div class="produkt-text">
+                <h3 class="produkt-name">Partystativ</h3>
+                <p class="produkt-beschreibung">Perfekt für deine Party!</p>
+                <p class="produkt-preis">20€/Tag</p>
+            </div>
         </div>
         <div class="produkt-box">
-            <img class="produkt-bild" src="" alt="Bild">
-            <h3 class="produkt-name">Nebelmaschine</h3>
-            <p class="produkt-beschreibung">Inklusive Fluide!</p>
-            <p class="produkt-preis">10€/Tag</p>
+            <img class="produkt-bild" src="assets/Nebelmaschine.jpg" alt="Nebelmaschine">
+            <div class="produkt-text">
+                <h3 class="produkt-name">Nebelmaschine</h3>
+                <p class="produkt-beschreibung">Inklusive Fluide!</p>
+                <p class="produkt-preis">10€/Tag</p>
+            </div>
         </div>
         <div class="produkt-box">
-            <img class="produkt-bild" src="" alt="Bild">
-            <h3 class="produkt-name">Lautsprecher</h3>
-            <p class="produkt-beschreibung">Guter Sound ist ein Muss!</p>
-            <p class="produkt-preis">50€/Tag</p>
+            <img class="produkt-bild" src="assets/Lautsprecher.jpg" alt="Lautsprecher">
+            <div class="produkt-text">
+                <h3 class="produkt-name">Lautsprecher</h3>
+                <p class="produkt-beschreibung">Guter Sound ist ein Muss!</p>
+                <p class="produkt-preis">50€/Tag</p>
+            </div>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -75,7 +85,7 @@
         <input type="date" name="datum" id="datum" placeholder="Datum"><br>
         <label for="ort">Wo möchtest du feiern?</label><br>
         <input type="test" name="plz" id="plz" placeholder="Postleitzahl">
-        <input type="text" name="strasse" id="strasse" placeholder="Straße und Hausnummer"><br>
+        <input type="number" name="strasse" id="strasse" placeholder="Straße und Hausnummer"><br>
         <label for="produktauswahl">Was möchtest du mieten?</label><br>
         <input type="checkbox" name="checkbox-stativ" id="checkbox-stativ" value="partystativ">
         <label class="" for="checkbox-stativ">Partystativ</label>
@@ -86,8 +96,8 @@
         <input type="submit" value="Jetzt anfragen!">
     </form>
     <script src="formular_validation.js"></script>
-    <footer>
-        <img id="logo" src="assets/NIGHTSHIFT_Kreuz.png" alt="Logo">
+    <footer id="footer">
+        <img id="logo" src="assets/NIGHTSHIFT_Kreuz.svg" alt="Logo">
         <nav class="float-right">
             <ul>
                 <li><a href="">Kontakt</a></li>

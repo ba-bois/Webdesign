@@ -2,7 +2,7 @@
 /* All-Selektor */
 *{
     margin: 0;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Saira', sans-serif;
     padding: 0;
     color: #ffffff;
     background-color: #000000;
@@ -27,6 +27,10 @@ article{
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 30vh;
+}
+
+h1{
+    font-family: Bebas Neue;
 }
 
 h2{
@@ -57,9 +61,17 @@ input::placeholder{
     font-size: 3vmin;
 }
 
-label{
+header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
 }
 
+aside{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
 
 /* Klassen-Selektoren */
 .clearfix{
@@ -95,10 +107,11 @@ label{
     text-align: center;
     border-radius: 30px;
     margin: 30px;
+    position: relative;
 }
 
 .produkt-box *{
-    font-size: 3vmin;
+    font-size: 2.5vmin;
 }
 
 .produkt-name, .produkt-beschreibung, .produkt-preis{
@@ -107,9 +120,19 @@ label{
     margin-bottom: 10px;
 }
 
-.produkt-name{
-    position: relative;
-    margin-top: 350px;
+.produkt-text{
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+.produkt-bild{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    background-color: #FFFFFF;
+    margin-top: 20px;
 }
 
 .input-valid{
@@ -118,7 +141,7 @@ label{
 }
 
 .input-invalid{
-    border:#ff0000;
+    border:#ea174c;
     border-style: solid;
 }
 
