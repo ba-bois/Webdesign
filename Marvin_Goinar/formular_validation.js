@@ -1,20 +1,13 @@
-var regexName = /^([a-zA-Z]+)$/;
-
-var vorname = document.getElementById("vorname");
-var nachname = document.getElementById("nachname");
-var email = document.getElementById("email");
-var plz = document.getElementById("plz");
-var strasse = document.getElementById("strasse");
-
 const regexMap = {
-    "vorname": /^([a-zA-Z]+)$/,
-    "nachname": /^([a-zA-Z]+)$/,
-    "email": /^([a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+)$/,
-    "plz": /^([0-9]+)$/,
-    "strasse": /^([a-zA-Z]+)$/
+    "vorname": /^([A-Za-z0-9ÄÖÜäöüß]+)$/,
+    "nachname": /^([A-Za-z0-9ÄÖÜäöüß]+)$/,
+    "email": /^([A-Za-z0-9ÄÖÜäöüß]+@[A-Za-z0-9ÄÖÜäöüß]+\.[A-Za-z0-9ÄÖÜäöüß]+)$/,
+    "plz": /^([0-9]{5})$/,
+    "strasse": /^([A-Za-z0-9ÄÖÜäöüß]+)$/
 }
 
-function handleBlur(element, regex){
+function handleBlur(id, regex){
+    var element = document.getElementById(id);
     element.onblur = function(){
         if(element.value.match(regex)){
             element.classList.remove("input-invalid");
@@ -26,8 +19,8 @@ function handleBlur(element, regex){
     }
 }
 
-handleBlur(vorname, regexMap.vorname);
-handleBlur(nachname, regexMap.nachname);
-handleBlur(email, regexMap.email);
-handleBlur(plz, regexMap.plz);
-handleBlur(strasse, regexMap.strasse);
+handleBlur("vorname", regexMap.vorname);
+handleBlur("nachname", regexMap.nachname);
+handleBlur("email", regexMap.email);
+handleBlur("plz", regexMap.plz);
+handleBlur("strasse", regexMap.strasse);
