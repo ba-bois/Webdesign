@@ -1,0 +1,67 @@
+.header {
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.header > .logo {
+    width: 200px;
+}
+
+.header > .logo:hover {
+    fill: var(--color-secondary1);
+}
+
+.header > .title {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.header > .links {
+    display: flex;
+    margin-left: auto;
+}
+
+.header > .links > .link {
+    font-weight: bold;
+    font-size: 36px;
+    cursor: pointer;
+    transition: color 100ms;
+    color: var(--color-primary);
+    padding-right: 20vh;
+    text-decoration: none;
+}
+
+.header > .links > .link.active {
+    color: var(--color-secondary1);
+    cursor: default;
+}
+
+.header > .links > .link:hover {
+    color: var(--color-secondary1);
+}
+
+.header > .links > .link:not(:first-child) {
+    padding-left: 20px;
+}
+
+.header > .links > .link:not(:last-child) {
+    border-right: solid var(--color-primary) 2px;
+    padding-right: 20px;
+}
+
+@media (max-width: 1500px) {
+    .header > .links > .link:not(:first-child) {
+        padding-left: 0;
+        border: none !important;
+    }
+
+    .header > .links > .link:not(:last-child) {
+        border: none;
+        padding-right: 0 !important;
+    }
+
+    .header > .links {
+        flex-direction: column;
+    }
+}

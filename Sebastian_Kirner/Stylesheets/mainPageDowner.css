@@ -1,0 +1,70 @@
+.wrapper > .downerPage {
+    height: 100vh;
+}
+
+.wrapper > .downerPage > .pageLinks {
+    min-height: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (max-width: 1400px) {
+    .wrapper > .downerPage > .pageLinks {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+}
+
+.wrapper > .downerPage > .pageLinks > .boxElement {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 250ms;
+}
+
+.wrapper > .downerPage > .pageLinks > .boxElement:hover {
+    transform: translateY(-10px);
+}
+
+.wrapper > .downerPage > .pageLinks > .boxElement > div {
+    height: 130px;
+}
+
+.wrapper > .downerPage > .pageLinks > .boxElement > .iconBox {
+    width: 165px;
+    border: var(--color-primary) solid;
+    border-radius: 15px 0 0 15px;
+    background-color: var(--color-secondary1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-width: 3px;
+}
+
+.wrapper > .downerPage > .pageLinks > .boxElement > .iconBox > img {
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+}
+
+.wrapper > .downerPage > .pageLinks > .boxElement > .nameBox {
+    width: 500px;
+    border: var(--color-primary) solid;
+    border-width: 3px 3px 3px 0;
+    border-radius: 0 15px 15px 0;
+    background-color: var(--color-secondary2);
+
+    display: flex;
+    align-items: center;
+}
+
+.wrapper > .downerPage > .pageLinks > .boxElement > .nameBox > .text {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 32px;
+}

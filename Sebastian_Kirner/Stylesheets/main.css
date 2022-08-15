@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap");
+
+:root {
+    --color-background: #f5f7dc;
+    --color-primary: #0f0326;
+    --color-secondary1: #b5d99c;
+    --color-secondary2: #ffff82;
+    --color-error: #e65f5c;
+}
+
+body,
+html {
+    background-color: var(--color-background);
+    margin: 0;
+    font-family: "Gentium Book Basic", serif;
+
+    scrollbar-color: var(--color-secondary1) var(--color-background);
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-secondary1);
+    outline: 1px solid var(--color-secondary1);
+    border-radius: 50px;
+}
+
+::selection {
+    color: var(--color-primary);
+    background: var(--color-secondary2);
+}
