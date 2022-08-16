@@ -13,6 +13,7 @@ html {
     background-color: var(--color-background);
     margin: 0;
     font-family: "Gentium Book Basic", serif;
+    color: var(--color-primary);
 
     scrollbar-color: var(--color-secondary1) var(--color-background);
     scrollbar-width: thin;
@@ -32,4 +33,10 @@ html {
 ::selection {
     color: var(--color-primary);
     background: var(--color-secondary2);
+}
+
+.subBody {
+    margin: 0 auto 0 auto;
+    width: 80%;
+    max-width: 1700px;
 }

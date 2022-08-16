@@ -1,11 +1,11 @@
-.publishBody {
+.subBody {
     display: flex;
     flex-direction: column;
-    margin: 10vh;
     align-items: stretch;
+    margin-bottom: 5%;
 }
 
-.publishBody > div.spacer {
+.subBody > div.spacer {
     display: flex;
     flex-direction: row;
     width: auto;
@@ -15,20 +15,20 @@
 }
 
 @media (max-width: 1400px) {
-    .publishBody > div.spacer {
+    .subBody > div.spacer {
         flex-direction: column;
     }
 }
 
-.publishBody > div.spacer:not(:first-child) {
+.subBody > div.spacer:not(:first-child) {
     margin-top: 15px;
 }
 
-.publishBody > div.spacer:not(:last-child) {
+.subBody > div.spacer:not(:last-child) {
     margin-bottom: 15px;
 }
 
-.publishBody .input {
+.subBody .input {
     font-family: inherit;
     flex: 1;
     font-size: 36px;
@@ -39,12 +39,12 @@
     outline: none;
 }
 
-.publishBody textarea {
+.subBody textarea {
     height: 300px;
     resize: none;
 }
 
-.publishBody input[type="submit"] {
+.subBody input[type="submit"] {
     width: 400px;
     appearance: none;
     -webkit-appearance: none;
@@ -54,16 +54,16 @@
     max-width: 40%;
 }
 
-.publishBody input[type="submit"]:hover {
+.subBody input[type="submit"]:hover {
     background-color: var(--color-secondary2);
     cursor: pointer;
 }
 
-.publishBody input[type="submit"]:active {
+.subBody input[type="submit"]:active {
     background-color: var(--color-background);
 }
 
-.publishBody > .spacer > .emptySpace {
+.subBody > .spacer > .emptySpace {
     width: 40px;
     height: 10px;
 }
