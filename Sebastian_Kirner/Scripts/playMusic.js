@@ -5,17 +5,15 @@ class MusicPlayer {
     audioPlayerEl = document.getElementById("audioPlayerSrc");
     audioPlayerElChild = document.getElementById("audioPlayerSrc");
 
-    audioPlayer = new Audio("../Assets/Audio/goldn-116392.mp3");
-
     #startPlayer(newSrc, newType) {
-        this.audioPlayer.src = newSrc;
-        this.audioPlayer.type = newType;
-        this.audioPlayer.play();
+        this.audioPlayerElChild.src = newSrc;
+        this.audioPlayerElChild.type = newType;
+        this.audioPlayerEl.play();
     }
 
     #pausePlayer() {
-        this.audioPlayer.currentTime = 0;
-        this.audioPlayer.pause();
+        this.audioPlayerEl.currentTime = 0;
+        this.audioPlayerEl.pause();
     }
 
     #play(el, audioSrc, audioType) {
@@ -55,14 +53,8 @@ const musicPlayer = new MusicPlayer();
 
 musicPlayer.registerPlayer("webdesign", "../Assets/Audio/goldn-116392.mp3", "audio/mpeg");
 
-musicPlayer.registerPlayer(
-    "banane",
-    "https://file-examples.com/storage/fe2ef7477862f581f9ce264/2017/11/file_example_MP3_2MG.mp3",
-    "audio/mpeg"
-);
+musicPlayer.registerPlayer("banane", "../Assets/Audio/cinematic-time-lapse-115672.mp4", "audio/mp4");
 
-musicPlayer.registerPlayer(
-    "apfel",
-    "https://file-examples.com/storage/fe2ef7477862f581f9ce264/2017/11/file_example_MP3_2MG.mp3",
-    "audio/mpeg"
-);
+musicPlayer.registerPlayer("apfel", "../Assets/Audio/milk-shake-116330.wav", "audio/x-wav");
+
+musicPlayer.registerPlayer("kiwi", "../Assets/Audio/stomping-rock-four-shots-111444.mp3", "audio/mpeg");
