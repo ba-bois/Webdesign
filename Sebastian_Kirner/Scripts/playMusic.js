@@ -3,20 +3,26 @@ class MusicPlayer {
     #currentlyPlayingID = null;
 
     audioPlayerEl = document.getElementById("audioPlayerSrc");
-    audioPlayerElChild = document.getElementById("audioPlayerSrc");
 
-    #startPlayer(newSrc, newType) {
-        this.audioPlayerElChild.src = newSrc;
-        this.audioPlayerElChild.type = newType;
+    #startPlayer(childArray) {
+        childArray.forEach(child => {
+            let newSourceEl = document.createElement("source");
+            newSourceEl.setAttribute("src", child.src);
+            newSourceEl.setAttribute("type", child.type);
+
+            this.audioPlayerEl.appendChild(newSourceEl);
+        });
+        this.audioPlayerEl.load();
         this.audioPlayerEl.play();
     }
 
     #pausePlayer() {
         this.audioPlayerEl.currentTime = 0;
         this.audioPlayerEl.pause();
+        this.audioPlayerEl.innerHTML = "";
     }
 
-    #play(el, audioSrc, audioType) {
+    #play(el, childArray) {
         this.#registeredIDs.forEach(registeredId => {
             if (registeredId !== el.id) {
                 document.getElementById(registeredId).src = "../Assets/IMGs/icon_play.png";
@@ -25,7 +31,7 @@ class MusicPlayer {
 
         el.src = "../Assets/IMGs/icon_pause.png";
         this.#pausePlayer();
-        this.#startPlayer(audioSrc, audioType);
+        this.#startPlayer(childArray);
     }
 
     #pause(el) {
@@ -33,14 +39,14 @@ class MusicPlayer {
         this.#pausePlayer();
     }
 
-    registerPlayer(id, audioSrc, audioType) {
+    registerPlayer(id, childArray) {
         const newPlayerEl = document.getElementById(id);
         this.#registeredIDs.push(id);
 
         newPlayerEl.addEventListener("click", () => {
             if (this.#currentlyPlayingID !== id) {
                 this.#currentlyPlayingID = id;
-                this.#play(newPlayerEl, audioSrc, audioType);
+                this.#play(newPlayerEl, childArray);
             } else {
                 this.#currentlyPlayingID = null;
                 this.#pause(newPlayerEl);
@@ -51,10 +57,16 @@ class MusicPlayer {
 
 const musicPlayer = new MusicPlayer();
 
-musicPlayer.registerPlayer("webdesign", "../Assets/Audio/goldn-116392.mp3", "audio/mpeg");
+musicPlayer.registerPlayer("webdesign", [{ src: "../Assets/Audio/goldn-116392.mp3", type: "audio/mpeg" }]);
 
-musicPlayer.registerPlayer("banane", "../Assets/Audio/cinematic-time-lapse-115672.mp4", "audio/mp4");
+musicPlayer.registerPlayer("banane", [
+    { src: "../Assets/Audio/cinematic-time-lapse-115672.mp4", type: "audio/mp4" },
+    { src: "../Assets/Audio/cinematic-time-lapse-115672.mp3", type: "audio/mp3" },
+]);
 
-musicPlayer.registerPlayer("apfel", "../Assets/Audio/milk-shake-116330.wav", "audio/x-wav");
+musicPlayer.registerPlayer("apfel", [
+    { src: "../Assets/Audio/milk-shake-116330.wav", type: "audio/x-wav" },
+    { src: "../Assets/Audio/milk-shake-116330.mp3", type: "audio/mp3" },
+]);
 
-musicPlayer.registerPlayer("kiwi", "../Assets/Audio/stomping-rock-four-shots-111444.mp3", "audio/mpeg");
+musicPlayer.registerPlayer("kiwi", [{ src: "../Assets/Audio/stomping-rock-four-shots-111444.mp3", type: "audio/mpeg" }]);
