@@ -4,6 +4,12 @@ class MusicPlayer {
 
     audioPlayerEl = document.getElementById("audioPlayerSrc");
 
+    constructor() {
+        this.audioPlayerEl.addEventListener("ended", () => {
+            this.#pause();
+        });
+    }
+
     #startPlayer(childArray) {
         childArray.forEach(child => {
             let newSourceEl = document.createElement("source");
