@@ -29,19 +29,15 @@ class MusicPlayer {
     }
 
     #play(el, childArray) {
-        this.#registeredIDs.forEach(registeredId => {
-            if (registeredId !== el.id) {
-                document.getElementById(registeredId).src = "../Assets/IMGs/icon_play.png";
-            }
-        });
-
+        this.#pause();
         el.src = "../Assets/IMGs/icon_pause.png";
-        this.#pausePlayer();
         this.#startPlayer(childArray);
     }
 
     #pause(el) {
-        el.src = "../Assets/IMGs/icon_play.png";
+        this.#registeredIDs.forEach(registeredId => {
+            document.getElementById(registeredId).src = "../Assets/IMGs/icon_play.png";
+        });
         this.#pausePlayer();
     }
 
