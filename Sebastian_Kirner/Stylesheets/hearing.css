@@ -1,0 +1,20 @@
+.container {
+    display: grid;
+    grid-template-columns: 100px 50% 50%;
+    grid-template-rows: 100%;
+
+    height: 100px;
+    background: var(--color-secondary1);
+    box-shadow: 1px 1px 10px var(--color-primary);
+}
+
+.subBody > .container > div:not(:last-child) {
+    border-right: solid var(--color-primary) 2px;
+}
+
+.subBody > .container > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

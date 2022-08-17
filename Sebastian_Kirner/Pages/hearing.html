@@ -4,11 +4,12 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/Assets/favicon.ico" />
         <link rel="stylesheet" href="../Stylesheets/main.css" />
-        <link rel="stylesheet" href="../Stylesheets/impressions.css" />
         <link rel="stylesheet" href="../Stylesheets/footer.css" />
         <link rel="stylesheet" href="../Stylesheets/header.css" />
         <link rel="stylesheet" href="../Stylesheets/hearing.css" />
+        <script type="module" src="../Scripts/playMusic.js"></script>
         <title>Impressionen</title>
     </head>
     <body>
@@ -24,8 +25,31 @@
             </div>
         </div>
         <div class="subBody">
+            <audio id="audioPlayerSrc" hidden preload="none">
+                <source
+                    id="audioPlayerElChild"
+                    src="https://file-examples.com/storage/fe2ef7477862f581f9ce264/2017/11/file_example_MP3_2MG.mp3"
+                    type="audio/mpeg"
+                />
+            </audio>
             <div class="container">
-                <div class="playicon">asd</div>
+                <div class="playIcon">
+                    <img src="../Assets/IMGs/icon_play.png" id="webdesign" alt="" srcset="" />
+                </div>
+                <div class="title">asd</div>
+                <div class="preview">:D</div>
+            </div>
+            <div class="container">
+                <div class="playIcon">
+                    <img src="../Assets/IMGs/icon_play.png" id="banane" alt="" srcset="" />
+                </div>
+                <div class="title">asd</div>
+                <div class="preview">asd</div>
+            </div>
+            <div class="container">
+                <div class="playIcon">
+                    <img src="../Assets/IMGs/icon_play.png" id="apfel" alt="" srcset="" />
+                </div>
                 <div class="title">asd</div>
                 <div class="preview">asd</div>
             </div>
@@ -38,7 +62,7 @@
                 <a target="_blank" rel="noreferrer noopener" href="https://studenten.ba-rm.de/">Berufsakademie Rhein-Main</a>
                 <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Gute Note wäre nett</a>
 
-                <a target="_blank" rel="noreferrer noopener" href="">BA BOIS</a>
+                <a target="_blank" rel="noreferrer noopener" href="../../index.html">BA BOIS</a>
             </div>
         </div>
     </body>
