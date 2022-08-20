@@ -7,7 +7,27 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 49% 2% 49%;
-    grid-template-rows: 100vh;
+}
+
+@media (max-width: 1550px) {
+    .wrapper > .upperpage {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 54% 6%;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .wrapper > .upperpage > .header {
+        order: 1;
+    }
+    .wrapper > .upperpage > .middle {
+        order: 3;
+    }
+    .wrapper > .upperpage > .canvas3D {
+        order: 2;
+    }
 }
 
 .wrapper > .upperpage > * {
@@ -17,7 +37,6 @@
 
 .wrapper > .upperpage > .header {
     animation: 2s jumpIn;
-    justify-self: start;
     margin-left: 80px;
 }
 
@@ -48,11 +67,11 @@
 }
 
 .wrapper > .upperpage > .canvas3D {
-    justify-self: end;
     margin-right: 80px;
-    width: 100%;
+    width: 600px;
     height: 450px;
-    border: solid black;
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes jumpIn {

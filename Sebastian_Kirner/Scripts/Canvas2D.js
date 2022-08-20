@@ -46,7 +46,7 @@ bookCtx.lineTo(rightDownCoordinatesX, rightDownCoordinatesY + 28);
 bookCtx.lineTo(rightDownCoordinatesX, rightDownCoordinatesY);
 bookCtx.lineTo(leftDownCoordinatesX, leftDownCoordinatesY);
 
-for (i = 7; i <= 21; i += 7) {
+for (let i = 7; i <= 21; i += 7) {
     bookCtx.moveTo(leftDownCoordinatesX + 5, leftDownCoordinatesY + i);
     bookCtx.lineTo(rightDownCoordinatesX - 5, leftDownCoordinatesY + i);
 }

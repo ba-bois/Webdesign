@@ -9,6 +9,15 @@ const savePDF = event => {
         10,
         10
     );
+
+    doc.setProperties({
+        title: "Einreichformular",
+        subject: `Es geht um die Veröffentlichung des Buches "${formEl.title.value}"`,
+        author: formEl.surname.value + " " + formEl.lastName.value,
+        keywords: "",
+        creator: formEl.surname.value + " " + formEl.lastName.value,
+    });
+
     doc.save(`Kontaktformular_${formEl.surname.value}_${formEl.lastName.value}.pdf`);
 
     event.preventDefault();
