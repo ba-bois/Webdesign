@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
+        <link rel="stylesheet" href="../Stylesheets/main.css" />
+        <link rel="stylesheet" href="../Stylesheets/footer.css" />
+        <link rel="stylesheet" href="../Stylesheets/header.css" />
+        <link rel="stylesheet" href="../Stylesheets/publish.css" />
+        <title>Gallerie</title>
+    </head>
+    <body>
+        <div class="header">
+            <img class="logo" src="../Assets/SVGs/logo.svg" alt="Logo: Geschenk" />
+            <div class="title">Veröffentlichen.</div>
+            <div class="links">
+                <a href="../Pages" class="link">Start</a>
+                <a href="../Pages/gallery.html" class="link">Gallerie</a>
+                <a class="link active">Veröffentlichen</a>
+                <a href="../Pages/reading.html" class="link">Lesen</a>
+                <a href="../Pages/hearing.html" class="link">Hören</a>
+            </div>
+        </div>
+        <form class="subBody" id="formPDF">
+            <div class="spacer">
+                <label hidden for="prefix">Anrede</label>
+                <input type="text" id="prefix" class="input" placeholder="Anrede" />
+                <div class="emptySpace"/></div>
+                <label hidden for="surname">Vorname</label>
+                <input required type="text" id="surname" class="input" placeholder="Vorname" />
+                <div class="emptySpace"/></div>
+                <label hidden for="lastName">Nachname</label>
+                <input required type="text" id="lastName" class="input" placeholder="Nachname" />
+            </div>
+            <div class="spacer">
+                <label hidden for="email">E-mail</label>
+                <input required type="email" id="email" class="input" placeholder="E-mail" />
+                <div class="emptySpace"/></div>
+                <label hidden for="telephonenumber">E-mail</label>
+                <input required type="text" id="telephonenumber" class="input" placeholder="Telefonnummer" />
+            </div>
+            <div class="spacer">
+                <label hidden for="genre">Genre</label>
+                <input required type="text" id="genre" class="input" placeholder="Genre" />
+                <div class="emptySpace"/></div>
+                <label hidden for="title">Titel des Romans</label>
+                <input required type="text" id="title" class="input" placeholder="Titel des Romans" />
+            </div>
+            <div class="spacer">
+            <label hidden for="description">Beschreibung des Werkes</label>
+            <textarea required type="text" id="description" class="input" placeholder="Beschreibung des Werkes"></textarea>
+            </div>
+            <div class="spacer">
+            <label hidden for="submitPDF">Formular generieren</label>
+            <input required type="submit" id="submitPDF" class="input" value="Formular generieren!" />
+        </div>
+        </form>
+        <div class="footer">
+            <hr class="line" />
+            <div class="names">
+                <a target="_blank" rel="noreferrer noopener" href="https://github.com/J-S-Bach">Sebastian Kirner</a>
+                <a target="_blank" rel="noreferrer noopener" href="https://www.commerzbank.de/">Commerzbank AG</a>
+                <a target="_blank" rel="noreferrer noopener" href="https://studenten.ba-rm.de/">Berufsakademie Rhein-Main</a>
+                <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Gute Note wäre nett</a>
+
+                <a target="_blank" rel="noreferrer noopener" href="">BA BOIS</a>
+            </div>
+        </div>
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>                
+    <script type="module" src="../Scripts/savePDF.js"></script>
+    </html>

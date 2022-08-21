@@ -1,0 +1,41 @@
+.container {
+    display: grid;
+    grid-template-columns: 100px auto 200px;
+    grid-template-rows: 100%;
+
+    height: 100px;
+    background: var(--color-secondary1);
+    box-shadow: 1px 1px 10px var(--color-primary);
+}
+
+.subBody {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.subBody > .container > div:not(:last-child) {
+    border-right: solid var(--color-primary) 2px;
+}
+
+.subBody > .container > .playIcon,
+.subBody > .container > .author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.subBody > .container > .playIcon:hover {
+    cursor: pointer;
+}
+
+.subBody > .container > .title {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    font-size: 32px;
+}
+
+.subBody > .container:not(:last-child) {
+    margin-bottom: 50px;
+}

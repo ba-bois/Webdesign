@@ -2,19 +2,193 @@
 /* All-Selektor */
 *{
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Saira', sans-serif;
     padding: 0;
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 4vmin;
 }
 /* Elementselektoren */
+a{
+    text-decoration: none;
+}
+
+li{
+    padding: 20px;
+    float: left;
+}
+
+ul{
+    list-style-type: none;
+}
+
+article{
+    width: 70%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30vh;
+}
+
+h1{
+    font-family: Bebas Neue;
+}
+
+h2{
+    color: #EAD017;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+form{
+    width: 1000px;
+    height: 1000px;
+    margin-left: 25vw;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+input{
+    color:rgb(75, 75, 75);
+    background-color: #ffffff;
+    border-radius: 100px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+input::placeholder{
+    padding-left: 10px;
+    font-size: 3vmin;
+}
+
+header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+aside{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
 
 /* Klassen-Selektoren */
-
-
 .clearfix{
     clear: both;
 }
+
+.button{
+    background-color: #1780EA;
+    padding: 8px;
+    width: 15vmin;
+    text-align: center;
+    border-radius: 5vmin;
+    font-size: 2vmin;
+}
+
+.rechtsangebunden{
+    text-align: right;
+}
+
+.float-right{
+    float: right;
+}
+
+.zentriert{
+    text-align: center;
+}
+
+.produkt-box{
+    float: right;
+    background-color: #ffffff;
+    height: 600px;
+    width: 350px;
+    text-align: center;
+    border-radius: 30px;
+    margin: 30px;
+    position: relative;
+}
+
+.produkt-box *{
+    font-size: 2.5vmin;
+}
+
+.produkt-name, .produkt-beschreibung, .produkt-preis{
+    background-color: #ffffff;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.produkt-text{
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+.produkt-bild{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+}
+
+.input-valid{
+    border: #1780EA;
+    border-style: solid;
+}
+
+.input-invalid{
+    border:#ea174c;
+    border-style: solid;
+}
+
 /* ID-Selektoren */
 #wrapper{
+    
+}
 
+#logo{
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+#logo-heading{
+    line-height: 80px;
+    float: left;
+}
+
+#mieten-button{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+#start-text{
+    text-align: center;
+    height: 60vh;
+    margin-top: 35vh;
+
+}
+
+#start-text h1{
+    font-size: 15vmin;
+}
+
+#produkte{
+    width: 1230px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+}
+
+@media only screen and (max-width: 1230px){
+    #produkte{
+        width: 410px;
+    }
 }
 

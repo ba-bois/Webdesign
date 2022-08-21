@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
+        <link rel="stylesheet" href="../Stylesheets/main.css" />
+        <link rel="stylesheet" href="../Stylesheets/mainPageUpper.css" />
+        <link rel="stylesheet" href="../Stylesheets/mainPageDowner.css" />
+        <link rel="stylesheet" href="../Stylesheets/footer.css" />
+        <title>OpenBooks</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="upperpage">
+                <div class="header">
+                    <div class="titleWithIcon">
+                        <img src="../Assets/SVGs/logo.svg" width="200px" height="200px" alt="Haupticon: Geschenk" class="icon">
+                        <span class="title">OpenBooks</span><br />
+                    </div>
+                    <span class="catchphrase">
+                        Your books. <br />
+                        At one place.
+                    </span>
+                </div>
+                <div class="middle">
+                    <svg class="down" width="96px" height="96px" viewBox="0 0 49  48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="64" height="64" fill="white" fill-opacity="0.01" />
+                        <path d="M37 18L25 30L13 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="canvas3D" id ="canvas3D">
+                    
+                </div>
+            </div>
+            <div class="downerPage">
+                <div class="pageLinks">
+                    <div class="boxElement" onclick="location.href='../Pages/gallery.html'">
+                        <div class="iconBox">
+                            <img src="https://cdn.pixabay.com/photo/2014/09/05/18/32/old-books-436498_960_720.jpg" alt="Vorschaubild: Alte Bücher">
+                        </div>
+                        <div class="nameBox">
+                            <div class="text">Impressionen empfinden</div>
+                        </div>
+                    </div>
+                    <div class="boxElement" onclick="location.href='../Pages/reading.html'">
+                        <div class="iconBox">
+                            <img src="../Assets/SVGs/akar-icons_book-close.svg" alt="stilisiertes Buch">
+                        </div>
+                        <div class="nameBox">
+                            <div class="text">Bücher lesen</div>
+                        </div>
+                    </div>
+                    <div class="boxElement" onclick="location.href='../Pages/publish.html'">
+                        <div class="iconBox">
+                            <canvas id="bookCanvas2D" width="150" height="120"></canvas>
+                        </div>
+                        <div class="nameBox">
+                            <div class="text">Selbst veröffentlichen</div>
+                        </div>
+                    </div>
+                    <div class="boxElement" onclick="location.href='../Pages/hearing.html'">
+                        <div class="iconBox">
+                            <img src="../Assets/SVGs/bi_ear.svg" alt="stilisiertes Ohr">
+                        </div>
+                        <div class="nameBox">
+                            <div class="text">Hörbücher hören</div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="footer">
+                        <hr class="line"/>
+                        <div class="names">
+                            <a target="_blank" rel="noreferrer noopener" href="https://github.com/J-S-Bach">Sebastian Kirner</a>
+                            <a target="_blank" rel="noreferrer noopener" href="https://www.commerzbank.de/">Commerzbank AG</a>
+                            <a target="_blank" rel="noreferrer noopener" href="https://studenten.ba-rm.de/">Berufsakademie Rhein-Main</a>
+                            <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Gute Note wäre nett</a>
+                        
+                            <a target="_blank" rel="noreferrer noopener" href="../../index.html">BA BOIS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script  type="module"src="../Scripts/Canvas3D.js"></script>
+        <script src="../Scripts/Canvas2D.js"></script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+.wrapper {
+    font-family: "Gentium Book Basic", "Helvetica", serif;
+    color: var(--color-primary);
+}
+
+.wrapper > .upperpage {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 49% 2% 49%;
+}
+
+@media (max-width: 1550px) {
+    .wrapper > .upperpage {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 54% 6%;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .wrapper > .upperpage > .header {
+        order: 1;
+    }
+    .wrapper > .upperpage > .middle {
+        order: 3;
+    }
+    .wrapper > .upperpage > .canvas3D {
+        order: 2;
+    }
+}
+
+.wrapper > .upperpage > * {
+    justify-self: center;
+    align-self: center;
+}
+
+.wrapper > .upperpage > .header {
+    animation: 2s jumpIn;
+    margin-left: 80px;
+}
+
+.wrapper > .upperpage > .header > .titleWithIcon {
+    display: flex;
+}
+
+.wrapper > .upperpage > .header > .titleWithIcon > .title {
+    font-size: 124px;
+    font-weight: bold;
+}
+
+.wrapper > .upperpage > .header > .catchphrase {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.wrapper > .upperpage > .middle {
+    align-self: end;
+}
+
+.wrapper > .upperpage > .middle > .down {
+    animation: infinite 2s bounce;
+}
+
+.wrapper > .upperpage > .middle > svg.down > path {
+    stroke: var(--color-primary);
+}
+
+.wrapper > .upperpage > .canvas3D {
+    margin-right: 80px;
+    width: 600px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes jumpIn {
+    0% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

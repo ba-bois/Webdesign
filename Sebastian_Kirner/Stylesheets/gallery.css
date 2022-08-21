@@ -1,0 +1,31 @@
+.subBody {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.subBody > .row {
+    margin-bottom: 6vh;
+}
+
+.subBody > .row > .entry {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subBody > .row > .entry > .element {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+.subBody > .row > .entry:not(:last-child) {
+    padding-bottom: 30px;
+    border-bottom: solid black 3px;
+}
+
+.subBody > .row > .entry:not(:first-child) {
+    padding-top: 30px;
+}
