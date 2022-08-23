@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico" />
         <link rel="stylesheet" href="../Stylesheets/main.css" />
         <link rel="stylesheet" href="../Stylesheets/footer.css" />
         <link rel="stylesheet" href="../Stylesheets/header.css" />
@@ -27,35 +27,35 @@
             <div class="spacer">
                 <label hidden for="prefix">Anrede</label>
                 <input type="text" id="prefix" class="input" placeholder="Anrede" />
-                <div class="emptySpace"/></div>
+                <div class="emptySpace"></div>
                 <label hidden for="surname">Vorname</label>
                 <input required type="text" id="surname" class="input" placeholder="Vorname" />
-                <div class="emptySpace"/></div>
+                <div class="emptySpace"></div>
                 <label hidden for="lastName">Nachname</label>
                 <input required type="text" id="lastName" class="input" placeholder="Nachname" />
             </div>
             <div class="spacer">
                 <label hidden for="email">E-mail</label>
                 <input required type="email" id="email" class="input" placeholder="E-mail" />
-                <div class="emptySpace"/></div>
+                <div class="emptySpace"></div>
                 <label hidden for="telephonenumber">E-mail</label>
                 <input required type="text" id="telephonenumber" class="input" placeholder="Telefonnummer" />
             </div>
             <div class="spacer">
                 <label hidden for="genre">Genre</label>
                 <input required type="text" id="genre" class="input" placeholder="Genre" />
-                <div class="emptySpace"/></div>
+                <div class="emptySpace"></div>
                 <label hidden for="title">Titel des Romans</label>
                 <input required type="text" id="title" class="input" placeholder="Titel des Romans" />
             </div>
             <div class="spacer">
-            <label hidden for="description">Beschreibung des Werkes</label>
-            <textarea required type="text" id="description" class="input" placeholder="Beschreibung des Werkes"></textarea>
+                <label hidden for="description">Beschreibung des Werkes</label>
+                <textarea required id="description" class="input" placeholder="Beschreibung des Werkes"></textarea>
             </div>
             <div class="spacer">
-            <label hidden for="submitPDF">Formular generieren</label>
-            <input required type="submit" id="submitPDF" class="input" value="Formular generieren!" />
-        </div>
+                <label hidden for="submitPDF">Formular generieren</label>
+                <input required type="submit" id="submitPDF" class="input" value="Formular generieren!" />
+            </div>
         </form>
         <div class="footer">
             <hr class="line" />
@@ -68,36 +68,35 @@
                 <a target="_blank" rel="noreferrer noopener" href="">BA BOIS</a>
             </div>
         </div>
+        <script type="module">
+            import "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
 
+            window.jsPDF = window.jspdf.jsPDF;
+
+            const formEl = document.getElementById("formPDF").elements;
+            const doc = new jsPDF();
+
+            const savePDF = event => {
+                doc.text(
+                    `Hey, ich bin ${formEl.prefix.value} ${formEl.surname.value} ${formEl.lastName.value}. \nIch möchte Euch gerne mein Werk "${formEl.title.value} aus dem Bereich ${formEl.genre.value} zeigen.\nDas hier ist die Beschreibung: \n\n${formEl.description.value}. \n\nHier könnt ihr mich erreichen: \n${formEl.telephonenumber.value} oder ${formEl.email.value}.`,
+                    10,
+                    10
+                );
+
+                doc.setProperties({
+                    title: "Einreichformular",
+                    subject: `Es geht um die Veröffentlichung des Buches "${formEl.title.value}"`,
+                    author: formEl.surname.value + " " + formEl.lastName.value,
+                    keywords: "",
+                    creator: formEl.surname.value + " " + formEl.lastName.value,
+                });
+
+                doc.save(`Kontaktformular_${formEl.surname.value}_${formEl.lastName.value}.pdf`);
+
+                event.preventDefault();
+            };
+
+            document.getElementById("submitPDF").addEventListener("click", event => savePDF(event));
+        </script>
     </body>
-    <script type="module">
-        import "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
-
-        window.jsPDF = window.jspdf.jsPDF;
-
-        const formEl = document.getElementById("formPDF").elements;
-        const doc = new jsPDF();
-
-        const savePDF = event => {
-            doc.text(
-                `Hey, ich bin ${formEl.prefix.value} ${formEl.surname.value} ${formEl.lastName.value}. \nIch möchte Euch gerne mein Werk "${formEl.title.value} aus dem Bereich ${formEl.genre.value} zeigen.\nDas hier ist die Beschreibung: \n\n${formEl.description.value}. \n\nHier könnt ihr mich erreichen: \n${formEl.telephonenumber.value} oder ${formEl.email.value}.`,
-                10,
-                10
-            );
-
-            doc.setProperties({
-                title: "Einreichformular",
-                subject: `Es geht um die Veröffentlichung des Buches "${formEl.title.value}"`,
-                author: formEl.surname.value + " " + formEl.lastName.value,
-                keywords: "",
-                creator: formEl.surname.value + " " + formEl.lastName.value,
-            });
-
-            doc.save(`Kontaktformular_${formEl.surname.value}_${formEl.lastName.value}.pdf`);
-
-            event.preventDefault();
-        };
-
-        document.getElementById("submitPDF").addEventListener("click", event => savePDF(event));
-    </script>
-    </html>
+</html>
