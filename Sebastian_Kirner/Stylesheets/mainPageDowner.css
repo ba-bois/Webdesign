@@ -11,7 +11,7 @@
     justify-items: center;
 }
 
-@media (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
     .wrapper > .downerPage > .pageLinks {
         grid-template-columns: 100%;
         grid-template-rows: 50% 50%;
