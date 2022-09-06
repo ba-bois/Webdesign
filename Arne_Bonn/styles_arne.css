@@ -1,20 +1,178 @@
 /* Kommentar im CSS-Block */
+
 /* All-Selektor */
 *{
-    margin: 0;
-    font-family: sans-serif;
-    padding: 0;
+    padding:0;
+    margin:0;
 }
+
 /* Elementselektoren */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    background-color: #003049;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav a{
+    text-decoration:none;
+    color: white;
+}
+
+footer a{
+    text-decoration:none;
+    color: black;
+}
+
+a:hover, a:focus, a.active{
+    text-decoration: underline;
+}
+
+h1{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 3em;
+}
+
+h2{
+    margin: 20px 50px 0px 50px;
+    font-size: 2em;
+}
+
+.container50 h2{
+    text-align: center;
+}
+
+p{    
+    margin: 20px 50px 0px 50px;
+    font-size: 1.2em;
+}
+
+figure{
+    margin-top: 20px;
+    display: table;
+}
+
+.container50 figure{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+figcaption{
+	display:table-caption;
+	caption-side:bottom;
+	text-align:center;
+	font-style:italic;
+}
+
+audio{
+    border-radius: 20px;
+    margin: 20px 50px 0px 50px;
+}
+
+footer{
+    margin-top: 50px;
+    padding: 10px;
+    background-color: gray;
+    text-align: center;
+}
 
 /* Klassen-Selektoren */
-
 
 .clearfix{
     clear: both;
 }
-/* ID-Selektoren */
-#wrapper{
 
+.download{
+    position: absolute;
+    right: 20px;
+    color: white;
 }
 
+.container{
+    background-color: whitesmoke;
+    min-height: 300px;
+    border-radius: 20px;
+    box-shadow: gray 3px 3px 4px;
+    padding: 10px;
+    margin: 20px 50px 10px 50px;
+}
+
+.container50{
+    margin: 20px 2.5% 10px 2.5%;
+    width: 45%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.floatr{
+    float: right;
+}
+
+.floatl{
+    float: left;
+    margin: 20px;
+    border: solid 1px gray;
+}
+
+.footerelement{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* ID-Selektoren */
+#wrapper{
+    background-color: white;
+    min-width: 800px;
+}
+
+#currentpage{
+    color: #FDF0D5;
+}
+
+@media screen and (max-width:800px){
+    #wrapper{
+        min-width: 600px;
+    }
+
+    .container50{
+        margin: 20px 50px 10px 50px;
+        width: auto;
+        box-sizing: content-box;
+        float: none;
+    }
+}
+
+@media screen and (max-width:600px){
+    #wrapper{
+        min-width: 500px;
+    }
+
+    nav ul{
+        display: block;
+    }
+    
+    nav li{
+        display: block;
+    }
+
+    .container figure{
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
