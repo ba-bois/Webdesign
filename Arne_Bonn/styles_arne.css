@@ -72,6 +72,18 @@ figure{
     margin-left: auto;
 }
 
+#media img{
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: gray 3px 3px 4px;
+}
+
+#media video{
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: gray 3px 3px 4px;
+}
+
 figcaption{
 	display:table-caption;
 	caption-side:bottom;
@@ -123,12 +135,6 @@ footer{
     float: right;
 }
 
-.floatl{
-    float: left;
-    margin: 20px;
-    border: solid 1px gray;
-}
-
 .footerelement{
     margin-left: 20px;
     margin-right: 20px;
@@ -142,6 +148,16 @@ footer{
 
 #currentpage{
     color: #FDF0D5;
+}
+
+#media{
+    margin: 20px 50px 0px 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+#can01{
+    border: solid 1px black;
 }
 
 @media screen and (max-width:800px){
