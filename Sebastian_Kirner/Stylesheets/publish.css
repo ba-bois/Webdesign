@@ -37,6 +37,7 @@
     border: var(--color-secondary1) solid 3px;
     background: var(--color-secondary2);
     outline: none;
+    padding-left: 10px;
 }
 
 .subBody textarea {

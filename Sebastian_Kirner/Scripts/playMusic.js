@@ -71,4 +71,8 @@ musicPlayer.registerPlayer("apfel", [
     { src: "../Assets/Audio/milk-shake-116330.mp3", type: "audio/mp3" },
 ]);
 
-musicPlayer.registerPlayer("kiwi", [{ src: "../Assets/Audio/stomping-rock-four-shots-111444.mp3", type: "audio/mpeg" }]);
+musicPlayer.registerPlayer("kiwi", [
+    { src: "../Assets/Audio/selbst_erzeugt.m4a", type: "audio/mp4" },
+    { src: "../Assets/Audio/selbst_erzeugt.mp3", type: "audio/mp3" },
+    { src: "../Assets/Audio/selbst_erzeugt.wav", type: "audio/x-wav" },
+]);
