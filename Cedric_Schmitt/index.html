@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cedrics Adventures</title>
+
+    <meta
+      name="description"
+      content="Mysteries in Galandria is a next generation online ttrpg game. Meet the characters and get to know the setting before we start on 2022-11-11."
+    />
+
+    <!-- CUSTOM FONT Grenze -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Grenze:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- USED STYLES -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/fancy-hr.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <div id="navbar-toggle"></div>
+    <div id="navbar">
+      <div id="logo">
+        <img src="assets/logo.svg" alt="Logo of Cedrics Adventures" />
+        <span>Cedrics Adventures</span>
+      </div>
+      <nav>
+        <a href="#trailer">Trailer</a>
+        <a href="#heroes">Heroes</a>
+        <a href="#locations">Locations</a>
+        <a href="experience.html" target="_blank">3D</a>
+        <div id="mute">
+          <div class="bar" id="bar-1"></div>
+          <div class="bar" id="bar-2"></div>
+          <div class="bar" id="bar-3"></div>
+          <div class="bar" id="bar-4"></div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- HEADER WITH HERO TITLE -->
+    <header>
+      <div id="page-hero">
+        <div>
+          <h1>Myteries in Galandria</h1>
+          <h2>An adventure with epic proportions</h2>
+          <a href="#trailer" role="button">Watch the trailer<img src="assets/arrow-right-thick.svg" width="24" alt="Right Arrow" /></a>
+        </div>
+      </div>
+      <img src="assets/arrow-down-thick.svg" alt="Show more" />
+      <div id="show-more-preview"></div>
+    </header>
+
+    <!-- TRAILER -->
+    <section id="trailer">
+      <div>
+        <hr />
+        <h2>Trailer</h2>
+      </div>
+      <video style="max-width: 1200px" poster="assets/trailer.webp" controls>
+        <source src="assets/video/trailer.mp4" type="video/mp4" />
+        <source src="assets/video/trailer.avi" type="video/x-msvideo" />
+        <source src="assets/video/trailer.mkv" type="video/x-matroska" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- HEROES -->
+    <section id="heroes">
+      <div style="opacity: 1">
+        <hr />
+        <h2>Our Heroes</h2>
+      </div>
+      <template id="hero-template">
+        <div class="hero-box" style="display: flex; align-items: center">
+          <div id="hero-image">
+            <div>
+              <img data-hero="player_image" style="z-index: 1" src="" alt="" />
+              <img data-hero="character_image" style="z-index: 0" src="" alt="" />
+            </div>
+          </div>
+
+          <div>
+            <h2 data-hero="player_name"></h2>
+            <h3><span data-hero="character_name"></span> - Lvl. <span data-hero="level"></span> <span data-hero="class"></span></h3>
+            <a data-hero="url" href="#" role="button"
+              >View character sheet<img src="assets/arrow-right-thick.svg" width="24" alt="Right Arrow"
+            /></a>
+          </div>
+        </div>
+      </template>
+    </section>
+
+    <!-- LOCATIONS -->
+    <section id="locations" style="clear: both">
+      <div>
+        <hr />
+        <h2>Locations</h2>
+      </div>
+
+      <div id="location-image-holder">
+        <div data-slider="current">
+          <div class="width: 100%; height: 100%; position: relative;">
+            <div data-slider-control="previous">
+              <img src="assets/chevron-left.svg" width="36" alt="" />
+            </div>
+
+            <img src="assets/locations/desert.webp" alt="Desert" />
+            <div data-slider-control="next">
+              <img src="assets/chevron-right.svg" width="36" alt="" />
+            </div>
+          </div>
+
+          <div data-slider="previous"></div>
+          <div data-slider="next"></div>
+        </div>
+      </div>
+
+      <div id="location-description">
+        <h2 data-slider="title">Location</h2>
+        <div data-slider="description"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <canvas height="24" width="24" id="copyright"></canvas>
+        <p>2022 Cedric Schmitt. All rights reserved.</p>
+      </div>
+      <p><a href="#">Legal Notice</a></p>
+    </footer>
+
+    <!-- Copyright Spinner -->
+    <script src="js/copyright.js"></script>
+    <!-- Heroes Section -->
+    <script src="js/heroes.js"></script>
+    <script src="js/heroes-loader.js"></script>
+    <!-- Page Observer for fly in animations -->
+    <script src="js/page-observer.js"></script>
+    <!-- image slider -->
+    <script src="js/slider.js"></script>
+    <!-- background audio -->
+    <script src="js/background-audio.js"></script>
+  </body>
+</html>

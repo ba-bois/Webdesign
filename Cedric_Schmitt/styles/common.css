@@ -1,0 +1,182 @@
+:root {
+	--primary: #121212;
+	--secondary: #1C1C1C;
+	--text: #FFFFFF;
+	--text-secondary: #C6C6C6;
+	--accent: #A4613B;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--primary);
+	width: 100%;
+
+	font-family: 'Grenze', serif;
+	font-size: 16pt;
+	color: white;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+}
+
+header, section, footer, #navbar {
+	display: flex;
+	box-sizing: border-box;
+}
+
+section {
+	flex-direction: column;
+	align-items: center;
+}
+
+section:nth-child(odd) {
+	background-color: var(--primary);
+}
+
+section:nth-child(even) {
+	background-color: var(--secondary);
+}
+
+section > div {
+	width: 1200px;
+	max-width: 1200px;
+}
+
+h1 {
+	font-size: 64pt;
+	margin: 0;
+	margin-bottom: 0.3em;
+}
+
+h2 {
+	font-size: 48pt;
+	margin: 0;
+	margin-bottom: 0.3em;
+}
+
+h3 {
+	font-size: 36pt;
+	margin: 0;
+	margin-bottom: 0.3em;
+}
+
+h4 {
+	font-size: 28pt;
+	margin: 0;
+	margin-bottom: 0.3em;
+}
+
+a {
+	color: var(--text-secondary);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--text);
+}
+
+a[role="button"], button {
+	display: inline-block;
+	width: auto;
+	padding: 12px 24px;
+	color: var(--text);
+	background-color: var(--accent);
+	border: none;
+	cursor: pointer;
+}
+
+/*** FOOTER ***/
+footer {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2em 0;
+}
+
+footer>div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer p {
+	margin: 0;
+}
+
+#navbar {
+	z-index: 10;
+}
+
+#logo {
+	display: flex;
+	align-items: center;
+
+	gap: 1.25rem;
+}
+
+#hero-image {
+	width: 300px;
+	height: 300px;
+	border: 2px solid var(--text);
+	padding: .5em;
+}
+
+#hero-image>div {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#hero-image img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#hero-image>div img:first-child:hover {
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+
+/*** DESKTOP SPECIFIC ***/
+@media screen and (min-width: 768px) {
+	#navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 48px 64px 0 64px;
+		justify-content: space-between;
+
+		transition: padding 0.2s ease-in-out;
+	}
+
+	#navbar.hidden {
+		padding: 16px 32px;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	nav {
+		gap: 1.25rem;
+	}
+
+	nav a {
+		color: var(--text-secondary);
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		color: var(--text);
+	}
+}
+
+@media screen and (min-width: 1900px) {
+	#navbar.hidden {
+		background-color: transparent !important;
+	}
+}

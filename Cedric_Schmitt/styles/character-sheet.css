@@ -1,0 +1,31 @@
+section#overview {
+	padding-top: 192px;
+	padding-bottom: 4em;
+}
+
+section#overview > div {
+	display: flex;
+	flex-direction: row;
+}
+
+section#overview > div > div:nth-child(2) {
+	margin-left: 2em;
+	flex: 1;
+}
+
+p#player_name {
+	color: var(--text-secondary);
+	margin-top: 0;
+}
+
+td {
+	padding: 0 2em .5em 0;
+}
+
+h2[data-hero="character_name"] {
+	margin-bottom: 0;
+}
+
+div#description-holder {
+	margin: 2em 0;
+}

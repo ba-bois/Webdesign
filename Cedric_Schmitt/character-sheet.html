@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/fancy-hr.css" />
+    <link rel="stylesheet" href="styles/character-sheet.css" />
+  </head>
+  <body>
+    <div id="navbar-toggle"></div>
+    <div id="navbar">
+      <div id="logo">
+        <img src="assets/logo.svg" alt="Logo of Cedrics Adventures" />
+        <span>Cedrics Adventures</span>
+      </div>
+      <nav>
+        <button id="generatePDFButton" onclick="generatePDF()">Download Character Sheet</button>
+      </nav>
+    </div>
+
+    <section id="overview">
+      <div>
+        <div id="hero-image">
+          <div>
+            <img data-hero="character_image" style="z-index: 1" src="" alt="" />
+            <img data-hero="player_image" style="z-index: 0" src="" alt="" />
+          </div>
+        </div>
+        <div>
+          <h2 data-hero="character_name"></h2>
+          <p id="player_name">Played by: <span data-hero="player_name"></span></p>
+          <hr />
+          <table>
+            <tr>
+              <td>
+                <strong>Race:</strong>
+                <span data-hero="race"></span>
+              </td>
+              <td>
+                <strong>Class:</strong>
+                <span data-hero="class"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Alignment:</strong>
+                <span data-hero="alignment"></span>
+              </td>
+              <td>
+                <strong>Level:</strong>
+                <span data-hero="level"></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="description">
+      <div>
+        <hr />
+        <h2>Description</h2>
+      </div>
+
+      <div id="description-holder">
+        <h4>Play narration by <span data-hero="player_name"></span></h4>
+        <audio controls>
+          <source src="assets/audio/lorem-ipsum.mp3" type="audio/mpeg" />
+          <source src="assets/audio/lorem-ipsum.ogg" type="audio/ogg" />
+          <source src="assets/audio/lorem-ipsum.wav" type="audio/x-wav" />
+          Your browser does not support the audio tag.</audio
+        ><br /><br />
+        <a href="assets/pdfs/beschreibung.pdf" download target="_blank" role="button">Download Description</a>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Fringilla est ullamcorper eget nulla facilisi. Turpis cursus in hac habitasse platea dictumst quisque. Nisl vel pretium lectus
+          quam id leo. Egestas integer eget aliquet nibh. Arcu cursus vitae congue mauris rhoncus aenean. Vel turpis nunc eget lorem dolor
+          sed viverra ipsum. Etiam erat velit scelerisque in dictum non consectetur a. Interdum varius sit amet mattis vulputate enim nulla
+          aliquet porttitor. Arcu odio ut sem nulla pharetra diam. Dictum non consectetur a erat nam at. Pellentesque nec nam aliquam sem et
+          tortor consequat id porta. Amet mattis vulputate enim nulla. Eu ultrices vitae auctor eu augue ut lectus. Habitasse platea
+          dictumst vestibulum rhoncus. Imperdiet sed euismod nisi porta.
+        </p>
+        <p>
+          Morbi leo urna molestie at elementum eu facilisis. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Diam vulputate ut
+          pharetra sit. Fermentum leo vel orci porta non pulvinar. Etiam erat velit scelerisque in dictum non consectetur. In pellentesque
+          massa placerat duis. Odio pellentesque diam volutpat commodo sed egestas egestas. Lorem mollis aliquam ut porttitor leo a diam
+          sollicitudin tempor. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Urna id volutpat lacus laoreet. Accumsan
+          lacus vel facilisis volutpat est velit. Habitasse platea dictumst quisque sagittis purus sit. Quis ipsum suspendisse ultrices
+          gravida dictum fusce ut placerat. Malesuada nunc vel risus commodo. Amet consectetur adipiscing elit pellentesque habitant morbi
+          tristique senectus.
+        </p>
+        <p>
+          Sollicitudin aliquam ultrices sagittis orci a. Vulputate odio ut enim blandit volutpat maecenas volutpat. Ornare arcu dui vivamus
+          arcu felis. Eget sit amet tellus cras adipiscing. In cursus turpis massa tincidunt dui ut ornare lectus. Enim tortor at auctor
+          urna nunc id cursus metus. Ipsum dolor sit amet consectetur adipiscing. Vestibulum sed arcu non odio euismod lacinia. Vestibulum
+          mattis ullamcorper velit sed ullamcorper morbi. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Amet
+          aliquam id diam maecenas ultricies mi. Quis lectus nulla at volutpat. Vulputate odio ut enim blandit volutpat maecenas. Sagittis
+          purus sit amet volutpat consequat mauris nunc congue nisi.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <p>© 2022 Cedric Schmitt. All rights reserved.</p>
+      </div>
+      <p><a href="#">Legal Notice</a></p>
+    </footer>
+
+    <script src="js/heroes.js"></script>
+    <script src="js/jspdf.umd.min.js"></script>
+    <script src="js/character-sheet.js"></script>
+  </body>
+</html>

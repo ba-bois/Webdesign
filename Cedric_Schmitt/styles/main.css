@@ -1,0 +1,252 @@
+audio#background-music {
+	display: none;
+}
+
+
+/*** HEADER ***/
+header {
+	height: 100vh;
+	width: 100%;
+	margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+
+	padding-top: 96px;
+}
+
+header > img {
+	animation-name: up-and-down;
+
+	transform: translateY(-5px);
+
+	animation-duration: .4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes up-and-down {
+	from { transform: translateY(-5px); }
+	to { transform: translateY(-15px); }
+}
+
+#mute {
+	height: 16px;
+	display: flex;
+	cursor: pointer;
+	align-items: end;
+	gap: .25rem;
+}
+
+.bar {
+	width: 4px;
+	background-color: var(--text-secondary);
+	animation-name: bar;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	height: 4px;
+}
+
+.muted .bar {
+	animation-name: bar-muted;
+	animation-duration: .2s;
+}
+
+a[role="button"] {
+	display: inline-flex;
+	align-items: center;
+}
+a[role="button"] > img {
+	margin-left: .3em;
+}
+
+#bar-1 { animation-duration: .3s; animation-delay: .25s; }
+#bar-2 { animation-duration: .4s; animation-delay: .1s; }
+#bar-3 { animation-duration: .5s; animation-delay: .25s; }
+#bar-4 { animation-duration: .7s; animation-delay: .15s; }
+
+@keyframes bar {
+	from { height: 4px; }
+	to { height: 16px; }
+}
+@keyframes bar-muted {
+	to { height: 4px; }
+}
+
+#page-hero {
+	flex: 1;
+	width: 1200px;
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	align-items: center;
+	
+	background-image: url('../assets/hero-logo.webp');
+  background-repeat: no-repeat;
+	background-position: right -140px center;
+	background-size: 1000px auto;
+}
+
+#page-hero h1 {
+	animation: slide-from-top;
+	animation-duration: 1s;
+}
+#page-hero h2 {
+	animation: slide-from-left;
+	color: var(--text-secondary);
+	animation-duration: 1s;
+	font-size: 36pt;
+}
+#page-hero a {
+	animation: slide-from-bottom;
+	animation-duration: 1s;
+}
+
+@keyframes slide-from-top {
+	from { transform: translateY(-25px); opacity: 0.3; }
+	to {transform: translateY(0); opacity: 1; }
+}
+@keyframes slide-from-left {
+	from { transform: translateX(-25px); opacity: 0.3; }
+	to {transform: translateX(0); opacity: 1; }
+}
+@keyframes slide-from-bottom {
+	from { transform: translateY(25px); opacity: 0.3; }
+	to {transform: translateY(0); opacity: 1; }
+}
+
+#show-more-preview {
+	height: 2vh;
+	width: 100%;
+	background-color: var(--secondary);
+}
+
+
+/*** SECTION HEROES ***/
+section#heroes {
+	gap: 2em;
+	padding-bottom: 4em;
+}
+
+#heroes h3 {
+	color: var(--text-secondary);
+}
+
+#heroes > div {
+	width: 1200px;
+	max-width: 1200px;
+	gap: 1em;
+	opacity: 0;
+}
+#heroes > div.visible {
+	animation: slide-from-left 1s forwards;
+}
+
+
+/*** LOCATIONS ***/
+#locations > div:first-child, #locations > div:last-child {
+	width: 1200px;
+	max-width: 1200px;
+	width: 100%;
+}
+
+#location-image-holder {
+	margin-top: 1em;
+	width: 100%;
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+#locations div[data-slider="current"] {
+	width: 1200px;
+	max-width: 1200px;
+	width: 100%;
+	position: relative;
+	display: inline-block;
+}
+
+#locations div[data-slider="current"] > div > img {
+	max-width: 1200px;
+	width: 100%;
+	height: auto;
+}
+
+#locations div[data-slider="previous"] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: translateX(-101%);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+#locations div[data-slider="next"] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: translateX(101%);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	background-position: left;
+}
+
+#locations div[data-slider-control="previous"], #locations div[data-slider-control="next"] {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#locations div[data-slider-control="previous"] {
+	left: 1em;
+}
+
+#locations div[data-slider-control="previous"] img, #locations div[data-slider-control="next"] img {
+	box-sizing: border-box;
+	border: 2px solid white;
+	background: rgba(0, 0, 0, 0.35);
+}
+
+#locations div[data-slider-control="next"] {
+	right: 1em;
+}
+
+#location-description {
+	margin-bottom: 4em;
+}
+
+#location-description h2 {
+	margin-top: 1em;
+}
+
+#location-description div {
+	margin-top: .5em;
+}
+
+
+/*** TRAILER ***/
+#trailer div {
+	width: 1200px;
+}
+
+#trailer video {
+	width: 100%;
+	max-width: 1200px;
+	margin: 1em 0 4em 0 ;
+}
+
+#three-d {
+	max-width: 1200px;
+	width: 100%;
+	height: auto;
+	margin: 1em 0 4em 0;
+}
