@@ -1,0 +1,32 @@
+.body {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 0 10vw 0 10vw;
+}
+
+.body > .row {
+    margin-bottom: 6vh;
+}
+
+.body > .row > .entry {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body > .row > .entry > .element {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+.body > .row > .entry:not(:last-child) {
+    padding-bottom: 30px;
+    border-bottom: solid black 3px;
+}
+
+.body > .row > .entry:not(:first-child) {
+    padding-top: 30px;
+}
