@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- metadata -->
+<head>
+<title>Norwegen</title>	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href="../CSS/styles_tobias.css" rel="stylesheet" type="text/css" />
+<link href="../CSS/box.css" rel="stylesheet" />
+<link href="../CSS/raster.css" rel="stylesheet" />
+<link href="../CSS/2d.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="formular">
+        <h1>Kontakt</h1>
+        <form id="formu" name="contact-form" enctype="text/plain"><br>
+            <label for="vName" class="data">Vorname</label><br>
+            <input type="text" id="vName" name="vName" /><br>
+            <label for="nName">Nachname</label><br>
+            <input type="text" id="nName" name="nName"/><br>
+            <label for="plz">Postleizahl</label><br>
+            <input type="number" id="plz" name="plz" /><br>
+            <label for="Wohnort">Wohnort</label><br>
+            <input type="text" id="Wohnort" name="Wohnort"><br>
+            <label for="str">Straße</label><br>
+            <input type="text" id="str" name="str"/><br>
+            <label for="Hausnummer">Hausnummer</label><br>
+            <input type="number" min="0" id="Hausnummer" name="hausnummer"/><br>
+            <label for="nachricht">Deine Nachricht</label><br>
+            <textarea id="nachricht" name="nachricht">Lieber Weihnachtsmann, </textarea><br>
+        </form>
+        <div role="button" onclick="downloadpdf(event)">
+            <div class="boxen">
+                <div class="card_of_box">
+                    <span>Brief herunterladen</span>
+                </div>
+            </div>  
+        </div>
+    </div>  
+    <footer>
+        <div class="submitPDF">
+            <div class="boxen">
+                <div class="card_of_box">
+                    <a href="subpage_tobias.html">Startseite</a>
+                </div>
+            </div>    
+        </div>
+    </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../PDF.js"></script>
+</body>
+</html>

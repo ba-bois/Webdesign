@@ -1,0 +1,114 @@
+/* Kommentar im CSS-Block */
+/* All-Selektor */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --main-brand-color: #5FCDD9;
+    --primary-color: #172026;
+    --secondary-color: #00575d;
+    --text-color: white;
+    --secondary-text-color: #B3B4B6
+
+}
+*{
+    margin: 0;
+    font-family: sans-serif;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: var(--text-color);
+}
+h1{
+    font-size: 100px;
+    line-height: 115%;
+}
+.subheading{
+    margin-top: 25px;
+    color: var(--secondary-text-color);
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Elementselektoren */
+
+/* Klassen-Selektoren */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.video-area{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+.secondpart{
+    height: 100vh; /*Bildschrimgröße / viewport hight 100 also hier eine Bidlschrimgröße*/
+
+}
+
+.banner{
+    text-align: center;
+    font-family: bignoodletitling;
+    color: #fff;
+    top: 100px;
+    height: 100vh;
+    background: rgba(0,0,0,0,0.5);
+    overflow: hidden;
+
+
+}
+.banner-test{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.jumpdown{
+    bottom: 10px;
+}
+.banner-test h1{
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+.banner-test h1 span{
+    color: red;
+}
+.banner-test h1:hover{
+    background: rgb(176,186,192);
+    transition: .50s;
+    color: #000;
+}
+.test{
+    text-align: center;
+    font-family: bignoodletitling;
+    color: #fff;
+    top: 100px;
+    height: 100vh;
+    background: rgba(0,0,0,0,0.5);
+
+}
+
+.btn-contact:hover{
+    background: yellow;
+    transition: .5s;
+    color: #000;
+}
+.clearfix{
+    clear: both;
+}
+
+
