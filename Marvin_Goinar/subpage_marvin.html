@@ -1,27 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="de">
 <!-- metadata -->
 <head>
 <title>Subpage Marvin</title>	
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="icon" type="image/x-icon" href="/Marvin_Goinar/assets/NIGHTSHIFT_Kreuz.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Saira&display=swap" rel="stylesheet">
 <link href="styles_marvin.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- visible content -->
-<body>
+<body onload="init();">
 <div id="wrapper">
     <header id="header">
-        <img id="logo" src="assets/NIGHTSHIFT_Kreuz.svg" alt="Logo">
+        <img class="logo" src="assets/NIGHTSHIFT_Kreuz.png" alt="Logo">
         <h1 id="logo-heading">NIGHTSHIFT</h1>
-        <nav class="float-right">
+        <nav class="float-right" id="nav-top">
             <ul>
                 <li><a href="#wrapper">HOME</a></li>
-                <li><a href="#produkte">PRODUKT</a></li>
+                <li><a href="#produkte-ueberschrift">PRODUKTE</a></li>
                 <li><a href="#footer">KONTAKT</a></li>
             </ul>
         </nav>
@@ -31,11 +31,29 @@
         <h1>NIGHTSHIFT</h1>
         <h2>Verpasse jetzt deiner Party den letzten Schliff mit der Licht- und</h2>
         <h2>Soundtechnik von NIGHTSHIFT!</h2>
-        <div id="mieten-button" class="button">Jetzt mieten</div>
-    </div>  
-    <aside>
-        
+        <a href="#contact-form" id="mieten-button">Jetzt mieten!</a>
+    </div> 
+    <aside id="aside-element">
+        <div class="contact-information">
+            <img class="contact-icons" src="assets/phone.svg" alt="Phone Symbol">
+            <p class="contact-text">01761239474</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="contact-information">
+            <img  class="contact-icons" src="assets/mail.svg" alt="Mail Symbol">
+            <p class="contact-text">contact@nightshift.com</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="contact-information">
+            <img class="contact-icons" src="assets/location.svg" alt="location Symbol">
+            <p class="contact-text">63781 Musterstraße 11</p>
+        </div>
+        <div class="clearfix"></div>
+        <button id="aside-button" onclick="changeText()">
+            <img id="contact-symbol" src="assets/contact_symbol.svg" alt="@">
+        </button>
     </aside>
+    <script src="JavaScript/aside.js"></script>
     <h2 class="infos">Informationen</h2>
     <article>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -45,26 +63,39 @@
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     </article>
     <div class="clearfix"></div>
-    <h1 class="zentriert">Produkte</h1>
+    <h1 class="zentriert" id="produkte-ueberschrift">Produkte</h1>
+    <script src="JavaScript/videoHover.js"></script>
     <div id="produkte">
-        <div class="produkt-box">
-            <img class="produkt-bild" src="assets/Partystativ.jpg" alt="Partystativ">
+        <div class="whitebox" onmouseover="showVideo('stativ-video')" onmouseout="hideVideo('stativ-video')">            
+            <img class="produkt-asset" src="assets//Stativ/Partystativ.jpg" alt="Partystativ">
+            <video class="produkt-asset produkt-video" id="stativ-video" loop muted>
+                <source src="assets/Stativ/Stativvideo.mp4" type="video/mp4">
+                <source src="assets/Stativ/Stativvideo.ogv" type="video/ogv">
+                <source src="assets/Stativ/Stativvideo.webm" type="video/webm">
+                Video kann nicht angezeigt werden.
+            </video>
             <div class="produkt-text">
                 <h3 class="produkt-name">Partystativ</h3>
                 <p class="produkt-beschreibung">Perfekt für deine Party!</p>
                 <p class="produkt-preis">20€/Tag</p>
             </div>
         </div>
-        <div class="produkt-box">
-            <img class="produkt-bild" src="assets/Nebelmaschine.jpg" alt="Nebelmaschine">
+        <div class="whitebox" onmouseover="showVideo('nebel-video')" onmouseout="hideVideo('nebel-video')">
+            <img class="produkt-asset" src="assets//Nebelmaschine/Nebelmaschine.jpg" alt="Nebelmaschine">
+            <video class="produkt-asset produkt-video" id="nebel-video" loop muted>
+                <source src="assets/Nebelmaschine/Nebelmaschine.mp4" type="video/mp4">
+                <source src="assets/Nebelmaschine/Nebelmaschine.ogv" type="video/ogv">
+                <source src="assets/Nebelmaschine/Nebelmaschine.webm" type="video/webm">
+                Video kann nicht angezeigt werden.
+            </video>
             <div class="produkt-text">
                 <h3 class="produkt-name">Nebelmaschine</h3>
                 <p class="produkt-beschreibung">Inklusive Fluide!</p>
                 <p class="produkt-preis">10€/Tag</p>
             </div>
         </div>
-        <div class="produkt-box">
-            <img class="produkt-bild" src="assets/Lautsprecher.jpg" alt="Lautsprecher">
+        <div class="whitebox">
+            <img class="produkt-asset" src="assets/lautsprecher/Lautsprecher.jpg" alt="Lautsprecher">
             <div class="produkt-text">
                 <h3 class="produkt-name">Lautsprecher</h3>
                 <p class="produkt-beschreibung">Guter Sound ist ein Muss!</p>
@@ -74,39 +105,68 @@
         <div class="clearfix"></div>
     </div>
     <h2>Du hast dich dazu entschlossen deiner Party den letzten Schliff zu verpassen?</h2>
-    <h2 class="rechtsangebunden">Um dir dabei zuhelfen, benötigen wir noch ein paar Informationen über dich und deine Feier</h2>
-    <form name="contact-form" action="">
+    <h2 class="rechtsangebunden float-right">Um dir dabei zuhelfen, benötigen wir noch ein paar Informationen über dich und deine Feier</h2>
+    <div class="clearfix"></div>
+    <form id="contact-form" action="/Marvin_Goinar/subpage_marvin.html">
         <label for="vorname">Wie heißt du?</label><br>
         <input type="text" id="vorname" name="vorname" placeholder="Vorname">
         <input type="text" id="nachname" name="nachname" placeholder="Nachname"><br>
         <label for="email">Wie lautet deine E-Mail?</label><br>
         <input type="email" id="email" name="email" placeholder="E-Mail"><br>
         <label for="datum">Wann möchtest du feiern?</label><br>
-        <input type="date" name="datum" id="datum" placeholder="Datum"><br>
-        <label for="ort">Wo möchtest du feiern?</label><br>
-        <input type="test" name="plz" id="plz" placeholder="Postleitzahl">
-        <input type="number" name="strasse" id="strasse" placeholder="Straße und Hausnummer"><br>
-        <label for="produktauswahl">Was möchtest du mieten?</label><br>
+        <input type="date" name="datum" id="datum" required><br>
+        <label for="plz">Wo möchtest du feiern?</label><br>
+        <input type="number" name="plz" id="plz" placeholder="Postleitzahl">
+        <input type="text" name="strasse" id="strasse" placeholder="Straße und Hausnummer"><br>
+        <label>Was möchtest du mieten?</label><br>
         <input type="checkbox" name="checkbox-stativ" id="checkbox-stativ" value="partystativ">
         <label class="" for="checkbox-stativ">Partystativ</label>
         <input type="checkbox" name="checkbox-nebelmaschine" id="checkbox-nebelmaschine" value="nebelmaschine">
         <label class="" for="checkbox-nebelmaschine">Nebelmaschine</label>
         <input type="checkbox" name="checkbox-lautsprecher" id="checkbox-lautsprecher" value="lautsprecher">
         <label class="" for="checkbox-lautsprecher">Lautsprecher</label><br>
-        <input type="submit" value="Jetzt anfragen!">
+        <div id="button-container">
+            <input type="submit" onclick="" id="submit-button" value="Jetzt anfragen!" disabled>
+        </div>
     </form>
-    <script src="formular_validation.js"></script>
+    <script src="JavaScript/formular.js"></script>
+    <div class="linie"></div>
+    <h1 class="zentriert">Das Team</h1>
+    <div id="mitarbeiter">
+        <div class="whitebox">
+            <img class="mitarbeiter-bild" src="assets/Mitarbeiter/mitarbeiter1.jpg" alt="Mitarbeiter">
+            <h2 class="mitarbeiter-name">Max Mustermann</h2>
+            <p class="mitarbeiter-beschreibung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+            <audio class="mitarbeiter-audio" controls>
+                <source src="assets/Mitarbeiter/mitarbeiter1.mp3" type="video/mp3">
+                <source src="assets/Mitarbeiter/mitarbeiter1.ogg" type="video/ogg">
+                <source src="assets/Mitarbeiter/mitarbeiter1.wav" type="video/wav">
+                Audio kann nicht abgespielt werden.
+            </audio>
+        </div>
+        <div class="whitebox">
+            <img class="mitarbeiter-bild" src="assets/Mitarbeiter/mitarbeiter2.jpg" alt="Mitarbeiter">
+            <h2 class="mitarbeiter-name">Max Mustermann</h2>
+            <p class="mitarbeiter-beschreibung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <script src="JavaScript/runningText.js" type="text/javascript"></script>
+    <canvas id="animierter-text" height="100">
+        Canvas kann nicht angezeigt werden. 
+    </canvas>
+    <div class="linie"></div>
     <footer id="footer">
-        <img id="logo" src="assets/NIGHTSHIFT_Kreuz.svg" alt="Logo">
-        <nav class="float-right">
+        <img class="logo" src="assets/NIGHTSHIFT_Kreuz.png" alt="Logo">
+        <nav class="float-right" id="nav-below">
             <ul>
+                <li><a href="assets/Nightshift.pdf" download id="download-link">Download</a></li>
                 <li><a href="">Kontakt</a></li>
                 <li><a href="">Datenschutz</a></li>
                 <li><a href="">Impressum</a></li>
             </ul>
         </nav>
     </footer>
-
 
 </div> <!-- wrapper -->
 </body>
