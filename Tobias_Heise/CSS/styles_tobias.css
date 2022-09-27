@@ -1,13 +1,9 @@
-/* Kommentar im CSS-Block */
-/* All-Selektor */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
     --main-brand-color: #5FCDD9;
     --primary-color: #172026;
     --secondary-color: #00575d;
-    --text-color: white;
-    --secondary-text-color: #B3B4B6
+    --text-color: white
 
 }
 *{
@@ -36,10 +32,6 @@ html{
     scroll-behavior: smooth;
 }
 
-/* Elementselektoren */
-
-/* Klassen-Selektoren */
-
 *{
     margin: 0;
     padding: 0;
@@ -53,7 +45,7 @@ html{
     z-index: -1;
 }
 .secondpart{
-    height: 100vh; /*Bildschrimgröße / viewport hight 100 also hier eine Bidlschrimgröße*/
+    height: 100vh;
 
 }
 
