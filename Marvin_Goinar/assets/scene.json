@@ -1,0 +1,58 @@
+{
+	"metadata": {
+		"version": 4.5,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "90621c33-984d-4e41-a45c-e740984c4b4d",
+			"type": "BoxGeometry",
+			"width": 1.6,
+			"height": 1,
+			"depth": 1,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		}],
+	"materials": [
+		{
+			"uuid": "4fa09772-433d-4cf7-850b-7c27878eac93",
+			"type": "MeshStandardMaterial",
+			"name": "test",
+			"color": 16777215,
+			"roughness": 1,
+			"metalness": 0,
+			"emissive": 10027008,
+			"envMapIntensity": 1,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680
+		}],
+	"object": {
+		"uuid": "f49f2526-f59b-4654-a98d-82e75b97f81e",
+		"type": "Scene",
+		"name": "Scene",
+		"layers": 1,
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"children": [
+			{
+				"uuid": "f429864e-7117-4664-b7b0-18313469eccf",
+				"type": "Mesh",
+				"name": "Box",
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+				"geometry": "90621c33-984d-4e41-a45c-e740984c4b4d",
+				"material": "4fa09772-433d-4cf7-850b-7c27878eac93"
+			}]
+	}
+}
