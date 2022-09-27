@@ -244,6 +244,11 @@ button{
     right: 25px;
 }
 
+.logo{
+    width: 80px;
+    height: 80px;
+    float: left;
+}
 /* ID-Selektoren */
 
 #start-text h1{
@@ -267,18 +272,12 @@ button{
     border-style: solid;
 }
 
-#logo{
-    width: 80px;
-    height: 80px;
-    float: left;
-}
-
 #logo-heading{
     line-height: 80px;
     float: left;
 }
 
-#mieten-button *{
+#mieten-button {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
@@ -287,6 +286,9 @@ button{
     width: 15vmin;
     border-radius: 5vmin;
     font-size: 1.3rem;
+    border: none;
+    text-align: center;
+    cursor: pointer;
 }
 
 #produkte{
@@ -361,7 +363,7 @@ button{
     li a{
         display: block;
     }
-    li, #logo{
+    li, .logo{
         float: none;
     }
 }

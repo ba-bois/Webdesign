@@ -16,7 +16,7 @@
 <body onload="init();">
 <div id="wrapper">
     <header id="header">
-        <img id="logo" src="assets/NIGHTSHIFT_Kreuz.png" alt="Logo">
+        <img class="logo" src="assets/NIGHTSHIFT_Kreuz.png" alt="Logo">
         <h1 id="logo-heading">NIGHTSHIFT</h1>
         <nav class="float-right" id="nav-top">
             <ul>
@@ -31,7 +31,7 @@
         <h1>NIGHTSHIFT</h1>
         <h2>Verpasse jetzt deiner Party den letzten Schliff mit der Licht- und</h2>
         <h2>Soundtechnik von NIGHTSHIFT!</h2>
-        <button id="mieten-button"><a href="#contact-form">Jetzt mieten!</a></button>
+        <a href="#contact-form" id="mieten-button">Jetzt mieten!</a>
     </div> 
     <aside id="aside-element">
         <div class="contact-information">
@@ -107,18 +107,18 @@
     <h2>Du hast dich dazu entschlossen deiner Party den letzten Schliff zu verpassen?</h2>
     <h2 class="rechtsangebunden float-right">Um dir dabei zuhelfen, benötigen wir noch ein paar Informationen über dich und deine Feier</h2>
     <div class="clearfix"></div>
-    <form id="contact-form" action="">
+    <form id="contact-form" action="/Marvin_Goinar/subpage_marvin.html">
         <label for="vorname">Wie heißt du?</label><br>
         <input type="text" id="vorname" name="vorname" placeholder="Vorname">
         <input type="text" id="nachname" name="nachname" placeholder="Nachname"><br>
         <label for="email">Wie lautet deine E-Mail?</label><br>
         <input type="email" id="email" name="email" placeholder="E-Mail"><br>
         <label for="datum">Wann möchtest du feiern?</label><br>
-        <input type="date" name="datum" id="datum" placeholder="Datum" required><br>
-        <label for="ort">Wo möchtest du feiern?</label><br>
+        <input type="date" name="datum" id="datum" required><br>
+        <label for="plz">Wo möchtest du feiern?</label><br>
         <input type="number" name="plz" id="plz" placeholder="Postleitzahl">
         <input type="text" name="strasse" id="strasse" placeholder="Straße und Hausnummer"><br>
-        <label for="produktauswahl">Was möchtest du mieten?</label><br>
+        <label>Was möchtest du mieten?</label><br>
         <input type="checkbox" name="checkbox-stativ" id="checkbox-stativ" value="partystativ">
         <label class="" for="checkbox-stativ">Partystativ</label>
         <input type="checkbox" name="checkbox-nebelmaschine" id="checkbox-nebelmaschine" value="nebelmaschine">
@@ -157,7 +157,7 @@
     </canvas>
     <div class="linie"></div>
     <footer id="footer">
-        <img id="logo" src="assets/NIGHTSHIFT_Kreuz.png" alt="Logo">
+        <img class="logo" src="assets/NIGHTSHIFT_Kreuz.png" alt="Logo">
         <nav class="float-right" id="nav-below">
             <ul>
                 <li><a href="assets/Nightshift.pdf" download id="download-link">Download</a></li>
